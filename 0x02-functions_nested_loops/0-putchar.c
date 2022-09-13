@@ -1,14 +1,14 @@
-#include "main.h"
+#include <main.h>
 /**
  *main - Entry point
  *
  *Description:prints _putchar
  *
- *Return: return 0 always Success
+ *Return: return 0 always success
  */
 int main(void)
 {
-	/*call _putchar function to print single character*/
+	/*call _putchar function to print single characters*/
 	_putchar('_');
 	_putchar('p');
 	_putchar('u');
