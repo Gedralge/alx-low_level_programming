@@ -2,7 +2,7 @@
 /**
  * main - prints aseries of numbers with commas
  *
- * Return: Always (Success)
+ * Return: (Success)
  */
 int main(void)
 {
@@ -14,7 +14,7 @@ int main(void)
 
 		if (c != '9')
 		{
-			putchar('.');
+			putchar(',');
 			putchar(' ');
 		}
 	}
