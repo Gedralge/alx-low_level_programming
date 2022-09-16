@@ -17,6 +17,7 @@ int min(void)
 	 * putchar(i);
 	 * }
 	 */
+
 	printf("infinite loop avoided! \\o/\n");
 
 	return (0);
