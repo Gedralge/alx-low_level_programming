@@ -2,9 +2,9 @@
 
 /**
  * rev_string - reverse a string
- * @s:string
- * Return:void
+ * @s: string
  */
+
 void rev_string(char *s)
 {
 	int i, k;
