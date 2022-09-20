@@ -6,19 +6,18 @@
  *
  * Return: Always (Success)
  */
-int main(void)
+intmain(void)
 {
-	int n;
-	char last[] = "last digit of";
+	int m;
+	char last[] = "last digit of" ;
 
 	srand(time(0));
-	n = rand() - RAND_MAX / 2;
-	printf("%s %d is %d and is ", last, n, n % 10);
-	if (n % 10 > 5)
+	m = rand() - RAND_MAX / 2;
+	printf("%s %d is %d and is " , last, m, m % 10 > 5);
 	{
-		printf(" greater than 5\n");
+		printf(" greater than 5\n")
 	}
-	else if (n % 10 == 0)
+	else if (m % 10 == 0)
 	{
 		printf("0\n");
 	}
@@ -26,5 +25,6 @@ int main(void)
 	{
 		printf(" less than 6 and not 0\n");
 	}
-	return (0);
+	return (0)
 }
+
