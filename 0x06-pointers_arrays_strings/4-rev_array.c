@@ -3,7 +3,7 @@
 /**
  * reverse_array - reverses the content of an array of integers
  * @a: pointer to string
- * @n; number of elements of the array.
+ * @n: number of elements in array.
  * Return: no return.
  */
 
