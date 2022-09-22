@@ -3,45 +3,33 @@
 
 /**
  * print_number - prints an integer using only _putchar
- * @p: input integer
+ * @n: input integer
  * Return: no return
  */
 
-void print_number(int p)
+void print_number(int n)
 {
-	int power;
-	int neg;
-	int hold;
+	unsigned int m, d, count;
 
-	neg = 0;
-	power = 1;
-	hold = p;
-	if (p < 0)
+	if (n < 0)
 	{
-
-		while (hold > 9 || hold < -9)
-		{
-			power *= 10;
-			hold /= 10;
-		}
-
-		while (power > 0)
-		{
-			if (!neg)
-					_putchar((p / power % 10);
-						else
-						_putchar((p / power % 10) * -1 + '0');
-
-						power /= 10;
-						}
-						if (power == 1)
-						{
-						if (neg)
-						_putchar(p % 10) * -1 + '0');
-					else
-					_putchar(p % 10 + '0');
-					power = 0;
-					}
-					}
-					}
+		_putchar(45);
+		m = n * -1;
+	}
+	else
+	{
+		m = n;
+	}
+	d = m;
+	count = 1;
+	while (d > 9)
+	{
+		d /= 10;
+		count *= 10;
+	}
+	for (; count >= 1; count /= 10)
+	{
+		_putchar(((m / count) % 10) + 48);
+	}
+}
 
