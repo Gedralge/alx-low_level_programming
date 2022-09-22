@@ -10,7 +10,7 @@ char *rot13(char *s)
 {
 	int count = 0, i;
 
-	char alphabet[] = "abcdefghijklmNOPQRSTUVWXYZ";
+	char alphabet[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char rot13[] = "nopqrstuvwxyzabcdeefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
 	while (*(s + count) != '\0')
