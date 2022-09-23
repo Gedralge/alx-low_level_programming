@@ -1,7 +1,7 @@
 #include "main.h"
-#include <stdio.h>
+
 /**
- * print_alphabeta-x10 - check alphabet lowercase
+ * print_alphabeta_x10 - prints the alphabet x10
  * Description: function uses _putchar function to print
  * alphabet in lowercase 10 times followed by anew line
  * Return: Nothing.
@@ -9,13 +9,14 @@
 
 void print_alphabet_x10(void)
 {
-	char c, i;
+	int alpha;
+	int alpha2;
 
-	for (i = 0; i <= 9; i++)
+	for (alpha = 0; alpha <= 9; alpha++)
 	{
-		for (c = 'a'; c <= 'z'; c++)
+		for (alpha2 = 'a'; alpha2 <= 'z'; alpha2++)
 		{
-			_putchar(c);
+			_putchar(alpha2);
 		}
 		_putchar('\n');
 	}
