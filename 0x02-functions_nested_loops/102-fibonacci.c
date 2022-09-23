@@ -21,7 +21,7 @@ int main(void)
 		if (inc == 49)
 			printf("\n");
 		else
-			printf(",");
+			printf(", ");
 
 	}
 
