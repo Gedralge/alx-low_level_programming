@@ -11,12 +11,12 @@ int main(void)
 
 	for (i = 'a'; i <= 'z'; i++)
 	{
-		if (i != 'e' && i != 'q')
-			putchar(i);
+		if (i == 'q')
+			continue;
+		else if (i == 'e')
+			continue;
 	}
-
 	putchar('\n');
-
 	return (0);
 }
 
