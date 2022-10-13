@@ -25,7 +25,7 @@ void print_strings(const char *seperator, const unsigned int n, ...)
 	{
 		ptr = va_arg(list, char*);
 		if (ptr == NULL)
-			ptr = " (nil)";
+			ptr = "(nil)";
 		printf("%s%s", sep, ptr);
 	}
 	printf("\n");
