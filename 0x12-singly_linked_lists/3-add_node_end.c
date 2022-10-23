@@ -18,11 +18,11 @@ list_t *add_node_end(list_t **head, const char *str)
 		return (NULL);
 	new->str = strdup(str);
 
-	for (ethan = 0
-			;str[ethan]; ethan++)
+	for (ethan = 0;
+			str[ethan]; ethan++)
 		;
 
-	new->len - ethan;
+	new->len = ethan;
 	new->next = NULL;
 
 	temp = *head;
@@ -32,11 +32,9 @@ list_t *add_node_end(list_t **head, const char *str)
 	}
 	else
 	{
-		while (temp->next != NULL) temp = temp->next
-			;
+		while (temp->next != NULL) temp->next;
 		temp->next = new;
 	}
 	return (*head);
 }
-
 
