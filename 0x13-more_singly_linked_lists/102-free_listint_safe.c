@@ -2,19 +2,20 @@
 
 /**
  * free_listint_safe - frees a list
- * @h: the pointer to the start of list to free
- * Return: size of free'd list (in nodes)
+ * @h: the pointer to the start of
+ * list to free
+ * Return: size of free'd list
  */
 size_t free_listint_safe(listint_t **h)
 {
-	size_t nodeCount = 0;
+	size_t nodecount = 0;
 	listint_t *tmp = NULL;
 
 	if (!(h && *h))
-		return (nodeCount);
+		return (nodecount);
 	while (*h)
 	{
-		nodeCount++;
+		nodecount++;
 		if (*h > (*h)->next)
 		{
 			tmp = *h;
@@ -28,6 +29,6 @@ size_t free_listint_safe(listint_t **h)
 		}
 	}
 	*h = NULL;
-	return (nodeCount);
+	return (nodecount);
 }
 
