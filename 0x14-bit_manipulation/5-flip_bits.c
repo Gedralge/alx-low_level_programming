@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * flip_bits - number of different bits between two numbers
@@ -10,18 +11,19 @@
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned long int mat, check;
-	unsigned int count, i;
+	unsigned long int diff;
+	int count;
 
+	diff = n ^ m;
 	count = 0;
-	check = 1;
-	mat = n ^ m;
-	for (i = 0; i < (sizeof(unsigned long int) * 8); i++)
+
+	while (diff)
 	{
-		if (check == (mat & check))
-			count++;
-		check <<= 1;
+		count++;
+		diff &= (diff - 1);
 	}
+
 	return (count);
 }
+
 
