@@ -9,24 +9,17 @@
  */
 unsigned int binary_to_unit(const char *b)
 {
-	unsigned int gerrol, ethan;
-	int len;
+	unsigned int gerrol;
+	int ethan;
 
-	if (b == NULL)
+	gerrol = 0;
+	if (!b)
 		return (0);
-
-	for (len = 0; b[len]; len++)
+	for (ethan = 0; b[ethan] != '\0'; ethan++)
 	{
-		if (b[len] != '0' && b[len] != '1')
-			return (0);
+		if (b[ethan] == '1')
+			gerrol += 1;
 	}
-
-	for (ethan = 1, gerrol = 0, len--; len >= 0; len--, ethan *= 2)
-	{
-		if (b[len] == '1')
-			gerrol += ethan;
-	}
-
 	return (gerrol);
 }
 
