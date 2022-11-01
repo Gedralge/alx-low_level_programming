@@ -1,50 +1,33 @@
 #include "main.h"
-#include <stdlib.h>
-
 /**
- * read_textfile - Reads a text file and prints it
- *  to POSIX stdout.
+ * read_textfile - Reads a text file and prints it to POSIX stdout.
+ * @filename:Name of the file.
+ * @letters:Nummber of letters to read and print
  *
- * @filename: Apointer to the name of the file.
- * @letters:The number of letters the function should read and print
- *
- * Return: 0 if it fails or actual number of letters if could 
- * read and print
+ * Return: 0 t
  */
+
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int gerrol;
-	ssize_t read_check, count;
-	char *buffer;
+	int fd, fileread;
+	char *buff = malloc(sizeof(char *) * letters);
 
-	if (filename == NULL) /* check if file is present */
+	if (!buff)
 		return (0);
 
-	gerrol = open(filename, O_RDONLY); /*open gerrol*/
-
-	if (gerrol == -1)
+	if (!filename)
 		return (0);
 
-	/* get the size of buffer from number of letters */
-	buffer = malloc(sizeof(char) * letters);
-	if (buffer == NULL)
-	{
-		free(buffer);
-		return (0);
-	}
-
-	read_check = read(gerrol, buffer, letters); /* read file*/
-	if (read_check == -1) /* check if gerrol failed */
+	fd = open(filename, O_RDONLY, 0600);
+	if (fd == -1)
 		return (0);
 
-	count = write(STDOUT_FTLENO, buffer, read_check); /*write to POSIX*/
-	if (count == -1 || read_check != count) /* check if write failed */
-		return (0);
+	fileread = read(fd, buff, letters);
+	write
+		(STDOUT_FILENO, buff, fileread);
 
-	free(buffer);
-
-	close(gerrol); /* close gerrol*/
-
-	return (count);
+	free(buff);
+	close(fd);
+	return (fileread);
 }
 
