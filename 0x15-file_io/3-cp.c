@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 	{
 		if (fd_w < 0 || write(fd_w, buf, x) != x)
 		{
-			dprintf(STDERR_FILENO, " Error: can't write to%s\n", argv[2]);
+			dprintf(STDERR_FILENO, " Error: can't write to %s\n", argv[2]);
 			close(fd_r);
 			exit(99);
 		}
